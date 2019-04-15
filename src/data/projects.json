@@ -1,0 +1,20 @@
+[
+  {
+    "header": "Healthcare",
+    "techs": ["faJava", "faAngular", "faMysql"],
+
+    "description": "This product is developed using angular js, angular js material design, java, j2ee and mysql technology stack.It is a hospital system based software which is used by one of the leading hospital chains of IVF fertility in india. "
+  },
+  {
+    "header": "BlockChain",
+    "techs": ["faReact", "faBootstrap", "faRedux"],
+
+    "description": "This product is developed using react js, redux, reactstrap, fullpage js technology stack.It is an exchange where people can trade with cryptocurrencies. "
+  },
+  {
+    "header": "Portfolio",
+    "techs": ["faReact", "faSemanticUi", "faGatsby", "faGrapghQl"],
+
+    "description": "This product is developed using react js, semantic-ui, gatsby js technology stack.It is a portfolio which currently you are seeing. "
+  }
+]
