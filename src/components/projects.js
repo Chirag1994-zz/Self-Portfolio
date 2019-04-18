@@ -4,7 +4,7 @@ import { Menu, Segment, ListItem } from "semantic-ui-react"
 import "semantic-ui-css/semantic.min.css"
 import "../styles/style.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
+import { faEnvelope, faPlusCircle } from "@fortawesome/free-solid-svg-icons"
 import {StaticQuery, graphql} from "gatsby"
 
 import {
@@ -35,6 +35,7 @@ const Projects =({children}) => (
           header
           techs
           description
+          icon
         }
       }
     }
@@ -64,34 +65,54 @@ const iconArray =[]
 var a =" "
 data.forEach(i =>{
 if(i =="faReact"){
-a = <FontAwesomeIcon color="#243665" size="2x"  title="react" key={i} icon={faReact} />
+a = <FontAwesomeIcon color="#663399" size="2x"  title="react" key={i} icon={faReact} />
 }else if(i == "faBootstrap"){
-  a = <FontAwesomeIcon size="2x" color="#243665" title="bootstrap" key={i} icon={faBootstrap} />
+  a = <FontAwesomeIcon size="2x" color="#663399" title="bootstrap" key={i} icon={faBootstrap} />
  
 }else if(i == "faSemanticUi"){
-  a = <FontAwesomeIcon size="2x" color="#243665" title="semantic-ui" key={i} icon={faSemanticUi} />
+  a = <img
+  title="semantic ui react"
+  width="32"
+src={require("../images/logo.png")}
+/>
  
 }else if(i == "faRedux"){
-  a = <FontAwesomeIcon size="2x" color="#243665"  key={i} icon={faRedux} />
+  a = <img
+  width="32"
+  title="redux"
+  src={require("../images/ricon.jpg")}
+/>
  
 }else if(i == "faJava"){
-  a = <FontAwesomeIcon size="2x" color="#243665" key={i} icon={faJava} />
+  a = <FontAwesomeIcon size="2x" color="#663399" title="java" key={i} icon={faJava} />
  
 }else if(i == "faAngular"){
-  a = <FontAwesomeIcon size="2x" color="#243665" key={i} icon={faAngular} />
+  a = <FontAwesomeIcon size="2x" color="#663399" key={i} icon={faAngular}  title="angular js" />
  
 }else if(i == "faMysql"){
-  a = <FontAwesomeIcon size="2x" color="#243665" key={i} icon={faMysql} />
+  a = <img
+  width="32"
+  title="mysql"
+  src={require("../images/micon.png")}
+/>
  
 }
 else if(i == "faGatsby"){
   a = <img
-
-  src={require("../images/gatsby-icon.png)}
+       width="32"
+       title="gatsbyjs"
+       src={require("../images/gatsby-icon.png")}
 />
  
 }
+else if(i == "faGrapghQl"){
+  a = <img
+       width="32"
+       title="graphql"
+       src={require("../images/gicon.png")}
+/>
  
+}
 
 
 iconArray.push(
@@ -112,7 +133,7 @@ function getProjects(data){
         <div className="content">
           <img
             className="right floated huge ui image"
-            src={require("../images/chirag.jpg")}
+            src={require('"' +item.node.icon + '"')}
           />
           <div className="header">{item.node.header}
          
